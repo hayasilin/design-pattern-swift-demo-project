@@ -16,6 +16,8 @@
 		6594272F20E8FE930059A4F4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6594272D20E8FE930059A4F4 /* MainViewController.xib */; };
 		6594273220E8FF530059A4F4 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594273020E8FF530059A4F4 /* MainTableViewCell.swift */; };
 		6594273320E8FF530059A4F4 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6594273120E8FF530059A4F4 /* MainTableViewCell.xib */; };
+		65FA57C823D2A0A500F696B2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FA57C723D2A0A500F696B2 /* Utils.swift */; };
+		65FA57CA23D2A13700F696B2 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FA57C923D2A13700F696B2 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		6594272D20E8FE930059A4F4 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		6594273020E8FF530059A4F4 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		6594273120E8FF530059A4F4 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		65FA57C723D2A0A500F696B2 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		65FA57C923D2A13700F696B2 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				6594272D20E8FE930059A4F4 /* MainViewController.xib */,
 				6594273020E8FF530059A4F4 /* MainTableViewCell.swift */,
 				6594273120E8FF530059A4F4 /* MainTableViewCell.xib */,
+				65FA57C723D2A0A500F696B2 /* Utils.swift */,
+				65FA57C923D2A13700F696B2 /* Product.swift */,
 			);
 			path = SportStore;
 			sourceTree = "<group>";
@@ -149,10 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65FA57C823D2A0A500F696B2 /* Utils.swift in Sources */,
 				6594272E20E8FE930059A4F4 /* MainViewController.swift in Sources */,
 				650B94DA20E5AB130036EB9E /* ViewController.swift in Sources */,
 				6594273220E8FF530059A4F4 /* MainTableViewCell.swift in Sources */,
 				650B94D820E5AB130036EB9E /* AppDelegate.swift in Sources */,
+				65FA57CA23D2A13700F696B2 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
