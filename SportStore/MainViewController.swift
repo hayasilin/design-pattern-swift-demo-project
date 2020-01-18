@@ -23,7 +23,7 @@ class MainViewController: UIViewController {
         ("Unsteady Chair", "Secretly give your opponent a disadvantage", "Chess", 29.95, 3),
         ("Human Chess Board", "A fun game for the family", "Chess", 75.0, 2),
         ("Bling-Bling King", "Gold-plated, diamond-studded King", "Chess", 1200.0, 4)
-    ];
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,8 +34,8 @@ class MainViewController: UIViewController {
     }
 
     func displayStockTotal() {
-        let stockTotal = products.reduce(0, { (total, product) -> Int in return total + product.4 });
-        totalStockLabel.text = "\(stockTotal) Products in Stock";
+        let stockTotal = products.reduce(0, { (total, product) -> Int in return total + product.4 })
+        totalStockLabel.text = "\(stockTotal) Products in Stock"
     }
 
 }
@@ -47,22 +47,22 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return products.count;
+        return products.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MainTableViewCell else {
-            fatalError("")
+            return UITableViewCell()
         }
 
-        let product = products[indexPath.row];
+        let product = products[indexPath.row]
 
-        cell.productId = indexPath.row;
-        cell.titleLabel.text = product.0;
-        cell.detailLabel.text = product.1;
-        cell.stockStepper.value = Double(product.4);
+        cell.productId = indexPath.row
+        cell.titleLabel.text = product.0
+        cell.detailLabel.text = product.1
+        cell.stockStepper.value = Double(product.4)
         cell.stockStepper.addTarget(self, action: #selector(stockLevelDidChange(sender:)), for: .valueChanged)
-        cell.stockField.text = String(product.4);
+        cell.stockField.text = String(product.4)
 
         return cell
     }
@@ -77,27 +77,27 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
                 currentCell = currentCell.superview!;
                 if let cell = currentCell as? MainTableViewCell {
                     if let id = cell.productId {
-                        var newStockLevel:Int?;
+                        var newStockLevel:Int?
 
                         if let stepper = sender as? UIStepper {
-                            newStockLevel = Int(stepper.value);
+                            newStockLevel = Int(stepper.value)
                         }
                         else if let textfield = sender as? UITextField {
                             if let newValue = textfield.text?.count {
-                                newStockLevel = newValue;
+                                newStockLevel = newValue
                             }
                         }
 
                         if let level = newStockLevel {
-                            products[id].4 = level;
-                            cell.stockStepper.value = Double(level);
-                            cell.stockField.text = String(level);
+                            products[id].4 = level
+                            cell.stockStepper.value = Double(level)
+                            cell.stockField.text = String(level)
                         }
                     }
-                    break;
+                    break
                 }
             }
-            displayStockTotal();
+            displayStockTotal()
         }
     }
 }
