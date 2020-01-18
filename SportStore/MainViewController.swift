@@ -30,6 +30,7 @@ class MainViewController: UIViewController {
 
         let nib = UINib(nibName: String(describing: MainTableViewCell.self), bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "cell")
+        displayStockTotal()
     }
 
     func displayStockTotal() {
