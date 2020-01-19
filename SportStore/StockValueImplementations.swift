@@ -22,7 +22,7 @@ class DollarStockValueFormatter: StockValueFormatter {
 class PoundStockValueFormatter: StockValueFormatter {
     func formatTotal(total: Double) -> String {
         let formatted = Utils.currencyStringFromNumber(number: total)
-        return "&\(formatted))"
+        return "Pound:\(formatted))"
     }
 }
 

@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
             )
         }
 
-        let factory = StockTotalFactory.getFactory(currency: .gbp)
+        let factory = StockTotalFactory.getFactory(currency: .eur)
         let totalAmount = factory.converter?.convertTotal(total: finalTotals.1)
         let formatted = factory.formatter?.formatTotal(total: totalAmount!)
 
