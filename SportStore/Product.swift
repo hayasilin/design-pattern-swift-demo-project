@@ -105,3 +105,24 @@ class SoccerProduct: Product {
         return [.soccerVideos]
     }
 }
+
+class ProductComposite: Product {
+    private let products: [Product]
+
+    required init(name: String, description: String, category: String, price: Double, stockLevel: Int) {
+        fatalError()
+    }
+
+    init(name: String, description: String, category: String, stockLevel: Int, products: [Product]) {
+        self.products = products
+        super.init(name: name, description: description, category: category, price: 0, stockLevel: stockLevel)
+    }
+
+    override var price: Double {
+        get {
+            return products.reduce(0) { (total, product) in
+                return total + product.price
+            }
+        }
+    }
+}

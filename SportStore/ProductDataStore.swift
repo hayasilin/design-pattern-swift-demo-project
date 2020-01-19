@@ -13,6 +13,12 @@ final class ProductDataStore {
     lazy var products: [Product] = self.loadData()
 
     private var productData: [Product] = [
+        ProductComposite(name: "Running Pack", description: "Complete running outfit", category: "Running", stockLevel: 10, products: [
+            Product(name: "Shirt", description: "Running shirt", category: "Running", price: 42, stockLevel: 10),
+            Product(name: "Shorts", description: "Running shorts", category: "Running", price: 30, stockLevel: 10),
+            Product(name: "Shoes", description: "Running shoes", category: "Running", price: 120, stockLevel: 10),
+            Product(name: "Headgear", description: "Hat, etc", category: "Running", price: 10, stockLevel: 10),
+            Product(name: "Sunglasses", description: "Glasses", category: "Running", price: 10, stockLevel: 10)]),
         Product.createProduct(name: "Kayak", description: "A boat for one person", category: "Watersports", price: 275.0, stockLevel: 10),
         Product.createProduct(name: "Lifejacket", description: "Protective and fashionable", category: "Watersports", price: 48.95, stockLevel: 14),
         Product.createProduct(name: "Soccer Ball", description: "FIFA-approved size and weight", category: "Soccer", price: 19.5, stockLevel: 32),
