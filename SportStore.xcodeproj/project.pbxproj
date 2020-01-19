@@ -15,6 +15,8 @@
 		654E3A5C23D2C82700EA6A77 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654E3A5B23D2C82700EA6A77 /* Logger.swift */; };
 		654E3A5E23D4064100EA6A77 /* StockValueImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654E3A5D23D4064100EA6A77 /* StockValueImplementations.swift */; };
 		654E3A6023D4076C00EA6A77 /* StockValueFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654E3A5F23D4076C00EA6A77 /* StockValueFactories.swift */; };
+		654E3A6223D41BC200EA6A77 /* ChangeRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654E3A6123D41BC200EA6A77 /* ChangeRecord.swift */; };
+		654E3A6423D41C9800EA6A77 /* ChangeRecordBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654E3A6323D41C9800EA6A77 /* ChangeRecordBuilder.swift */; };
 		6594272E20E8FE930059A4F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594272C20E8FE930059A4F4 /* MainViewController.swift */; };
 		6594272F20E8FE930059A4F4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6594272D20E8FE930059A4F4 /* MainViewController.xib */; };
 		6594273220E8FF530059A4F4 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594273020E8FF530059A4F4 /* MainTableViewCell.swift */; };
@@ -34,6 +36,8 @@
 		654E3A5B23D2C82700EA6A77 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		654E3A5D23D4064100EA6A77 /* StockValueImplementations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockValueImplementations.swift; sourceTree = "<group>"; };
 		654E3A5F23D4076C00EA6A77 /* StockValueFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockValueFactories.swift; sourceTree = "<group>"; };
+		654E3A6123D41BC200EA6A77 /* ChangeRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeRecord.swift; sourceTree = "<group>"; };
+		654E3A6323D41C9800EA6A77 /* ChangeRecordBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeRecordBuilder.swift; sourceTree = "<group>"; };
 		6594272C20E8FE930059A4F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6594272D20E8FE930059A4F4 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		6594273020E8FF530059A4F4 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				654E3A5B23D2C82700EA6A77 /* Logger.swift */,
 				654E3A5D23D4064100EA6A77 /* StockValueImplementations.swift */,
 				654E3A5F23D4076C00EA6A77 /* StockValueFactories.swift */,
+				654E3A6123D41BC200EA6A77 /* ChangeRecord.swift */,
+				654E3A6323D41C9800EA6A77 /* ChangeRecordBuilder.swift */,
 			);
 			path = SportStore;
 			sourceTree = "<group>";
@@ -164,10 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				654E3A6223D41BC200EA6A77 /* ChangeRecord.swift in Sources */,
 				654E3A6023D4076C00EA6A77 /* StockValueFactories.swift in Sources */,
 				65FA57C823D2A0A500F696B2 /* Utils.swift in Sources */,
 				6594272E20E8FE930059A4F4 /* MainViewController.swift in Sources */,
 				650B94DA20E5AB130036EB9E /* ViewController.swift in Sources */,
+				654E3A6423D41C9800EA6A77 /* ChangeRecordBuilder.swift in Sources */,
 				6594273220E8FF530059A4F4 /* MainTableViewCell.swift in Sources */,
 				654E3A5E23D4064100EA6A77 /* StockValueImplementations.swift in Sources */,
 				654E3A5C23D2C82700EA6A77 /* Logger.swift in Sources */,
