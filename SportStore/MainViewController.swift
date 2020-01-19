@@ -28,7 +28,7 @@ class MainViewController: UIViewController {
     }
 
     func displayStockTotal() {
-        let finalTotals: (Int, Double) = productStore.loadData().reduce((0, 0.0)) { (totals, product) -> (Int, Double) in
+        let finalTotals: (Int, Double) = productStore.products.reduce((0, 0.0)) { (totals, product) -> (Int, Double) in
             return (
                 totals.0 + product.stockLevel,
                 totals.1 + product.stockValue
@@ -47,7 +47,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return productStore.loadData().count
+        return productStore.products.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,8 +55,8 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
 
-        let product = productStore.loadData()[indexPath.row]
-        cell.product = productStore.loadData()[indexPath.row]
+        let product = productStore.products[indexPath.row]
+        cell.product = productStore.products[indexPath.row]
         cell.titleLabel.text = product.name
         cell.detailLabel.text = product.productDescription
         cell.stockStepper.addTarget(self, action: #selector(stockLevelDidChange(sender:)), for: .valueChanged)
@@ -90,8 +90,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
                                 product.stockLevel = newValue
                             }
                         }
-                        cell.stockStepper.value = Double(product.stockLevel)
-                        cell.stockField.text = String(product.stockLevel)
+
                         productLogger.logItem(item: product)
                     }
                     break
@@ -106,7 +105,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         if productName != nil {
             let stockLevel = data[productName!]
             if stockLevel != nil {
-                for nproduct in productStore.loadData() {
+                for nproduct in productStore.products {
                     if nproduct.name == productName {
                         nproduct.stockLevel = stockLevel!
                     }
