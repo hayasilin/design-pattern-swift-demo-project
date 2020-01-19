@@ -13,6 +13,8 @@
 		650B94DF20E5AB140036EB9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 650B94DE20E5AB140036EB9E /* Assets.xcassets */; };
 		650B94E220E5AB140036EB9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650B94E020E5AB140036EB9E /* LaunchScreen.storyboard */; };
 		654E3A5C23D2C82700EA6A77 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654E3A5B23D2C82700EA6A77 /* Logger.swift */; };
+		654E3A5E23D4064100EA6A77 /* StockValueImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654E3A5D23D4064100EA6A77 /* StockValueImplementations.swift */; };
+		654E3A6023D4076C00EA6A77 /* StockValueFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654E3A5F23D4076C00EA6A77 /* StockValueFactories.swift */; };
 		6594272E20E8FE930059A4F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594272C20E8FE930059A4F4 /* MainViewController.swift */; };
 		6594272F20E8FE930059A4F4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6594272D20E8FE930059A4F4 /* MainViewController.xib */; };
 		6594273220E8FF530059A4F4 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594273020E8FF530059A4F4 /* MainTableViewCell.swift */; };
@@ -30,6 +32,8 @@
 		650B94E120E5AB140036EB9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		650B94E320E5AB140036EB9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654E3A5B23D2C82700EA6A77 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		654E3A5D23D4064100EA6A77 /* StockValueImplementations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockValueImplementations.swift; sourceTree = "<group>"; };
+		654E3A5F23D4076C00EA6A77 /* StockValueFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockValueFactories.swift; sourceTree = "<group>"; };
 		6594272C20E8FE930059A4F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6594272D20E8FE930059A4F4 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		6594273020E8FF530059A4F4 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 				65FA57C723D2A0A500F696B2 /* Utils.swift */,
 				65FA57C923D2A13700F696B2 /* Product.swift */,
 				654E3A5B23D2C82700EA6A77 /* Logger.swift */,
+				654E3A5D23D4064100EA6A77 /* StockValueImplementations.swift */,
+				654E3A5F23D4076C00EA6A77 /* StockValueFactories.swift */,
 			);
 			path = SportStore;
 			sourceTree = "<group>";
@@ -158,10 +164,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				654E3A6023D4076C00EA6A77 /* StockValueFactories.swift in Sources */,
 				65FA57C823D2A0A500F696B2 /* Utils.swift in Sources */,
 				6594272E20E8FE930059A4F4 /* MainViewController.swift in Sources */,
 				650B94DA20E5AB130036EB9E /* ViewController.swift in Sources */,
 				6594273220E8FF530059A4F4 /* MainTableViewCell.swift in Sources */,
+				654E3A5E23D4064100EA6A77 /* StockValueImplementations.swift in Sources */,
 				654E3A5C23D2C82700EA6A77 /* Logger.swift in Sources */,
 				650B94D820E5AB130036EB9E /* AppDelegate.swift in Sources */,
 				65FA57CA23D2A13700F696B2 /* Product.swift in Sources */,

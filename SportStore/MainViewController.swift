@@ -39,7 +39,11 @@ class MainViewController: UIViewController {
             )
         }
 
-        totalStockLabel.text = "\(finalTotals.0) Products in Stock." + "Total value: \(Utils.currencyStringFromNumber(number: finalTotals.1))"
+        let factory = StockTotalFactory.getFactory(currency: .gbp)
+        let totalAmount = factory.converter?.convertTotal(total: finalTotals.1)
+        let formatted = factory.formatter?.formatTotal(total: totalAmount!)
+
+        totalStockLabel.text = "\(finalTotals.0) Products in Stock." + "Total value: \(String(describing: formatted))"
     }
 }
 
