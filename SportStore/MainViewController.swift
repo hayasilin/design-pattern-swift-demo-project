@@ -20,6 +20,13 @@ class MainViewController: UIViewController {
         displayStockTotal()
     }
 
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if event?.subtype == .motionShake {
+            print("Shake motion detected")
+            undoManager?.undo()
+        }
+    }
+
     func displayStockTotal() {
         let finalTotals: (Int, Double) = productStore.loadData().reduce((0, 0.0)) { (totals, product) -> (Int, Double) in
             return (
@@ -71,6 +78,11 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
                 currentCell = currentCell.superview!;
                 if let cell = currentCell as? MainTableViewCell {
                     if let product = cell.product {
+
+                        let dict = [product.name: product.stockLevel]
+                        undoManager?.registerUndo(withTarget: self, selector: #selector(undoStockLevel(data:)), object: dict)
+
+
                         if let stepper = sender as? UIStepper {
                             product.stockLevel = Int(stepper.value)
                         } else if let textfield = sender as? UITextField {
@@ -87,5 +99,33 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
             }
             displayStockTotal()
         }
+    }
+
+    @objc func undoStockLevel(data: [String: Int]) {
+        let productName = data.keys.first
+        if productName != nil {
+            let stockLevel = data[productName!]
+            if stockLevel != nil {
+                for nproduct in productStore.loadData() {
+                    if nproduct.name == productName {
+                        nproduct.stockLevel = stockLevel!
+                    }
+                }
+
+                updateStockLevel(name: productName!, level: stockLevel!)
+            }
+        }
+    }
+
+    func updateStockLevel(name: String, level: Int) {
+        for cell in self.tableView.visibleCells {
+            if let pcell = cell as? MainTableViewCell {
+                if pcell.product?.name == name {
+                    pcell.stockStepper.value = Double(level);
+                    pcell.stockField.text = String(level);
+                }
+            }
+        }
+        self.displayStockTotal();
     }
 }
