@@ -56,6 +56,8 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         cell.stockStepper.value = Double(product.stockLevel)
         cell.stockField.text = String(product.stockLevel)
 
+        CellFormatter.createChain().formatCell(cell: cell)
+
         return cell
     }
 
