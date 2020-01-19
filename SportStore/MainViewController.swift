@@ -8,15 +8,9 @@
 
 import UIKit
 
-var handler = { (p: Product) in
-    print("Change: \(p.name), \(p.stockLevel) items in stock")
-}
-
 class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalStockLabel: UILabel!
-
-    let logger = Logger<Product>(callback: handler)
 
     var products: [Product] = [
         Product(name: "Kayak", description: "A boat for one person", category: "Watersports", price: 275.0, stockLevel: 10),
@@ -93,7 +87,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
                         }
                         cell.stockStepper.value = Double(product.stockLevel)
                         cell.stockField.text = String(product.stockLevel)
-                        logger.logItem(item: product)
+                        productLogger.logItem(item: product)
                     }
                     break
                 }

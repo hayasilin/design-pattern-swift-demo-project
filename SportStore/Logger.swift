@@ -8,22 +8,39 @@
 
 import Foundation
 
-class Logger<T> where T: NSObject, T: NSCopying {
+let productLogger = Logger<Product>(callback: { p in
+    print("Change: \(p.name) \(p.stockLevel) item in stock")
+})
+
+final class Logger<T> where T: NSObject, T: NSCopying {
     var dataItems: [T] = []
     var callback: (T) -> Void
+    var arrayQ = DispatchQueue(label: "arrayQ")
+    var callbackQ = DispatchQueue(label: "callbackQ")
 
-    init(callback: @escaping (T) -> Void) {
+    init(callback: @escaping (T) -> Void, protect: Bool = true) {
         self.callback = callback
+        if protect {
+            self.callback = { (item: T) in
+                self.callbackQ.sync {
+                    callback(item)
+                }
+            }
+        }
     }
 
     func logItem(item: T) {
-        dataItems.append(item.copy() as! T)
-        callback(item)
+        arrayQ.async(flags: .barrier) { [weak self] in
+            self?.dataItems.append(item.copy() as! T)
+            self?.callback(item)
+        }
     }
 
     func processItems(callback: (T) -> Void) {
-        for item in dataItems {
-            callback(item)
+        arrayQ.sync {
+            for item in dataItems {
+                callback(item)
+            }
         }
     }
 }
