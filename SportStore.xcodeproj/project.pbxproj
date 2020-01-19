@@ -20,6 +20,7 @@
 		654E3A6623D4219100EA6A77 /* EuroHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654E3A6523D4219100EA6A77 /* EuroHandler.swift */; };
 		654E3A6A23D425CC00EA6A77 /* ProductDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654E3A6923D425CC00EA6A77 /* ProductDataStore.swift */; };
 		654E3A6C23D427CB00EA6A77 /* ProductDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654E3A6B23D427CB00EA6A77 /* ProductDecorator.swift */; };
+		654E3A6E23D42C9E00EA6A77 /* StockTotalFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654E3A6D23D42C9E00EA6A77 /* StockTotalFacade.swift */; };
 		6594272E20E8FE930059A4F4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594272C20E8FE930059A4F4 /* MainViewController.swift */; };
 		6594272F20E8FE930059A4F4 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6594272D20E8FE930059A4F4 /* MainViewController.xib */; };
 		6594273220E8FF530059A4F4 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6594273020E8FF530059A4F4 /* MainTableViewCell.swift */; };
@@ -44,6 +45,7 @@
 		654E3A6523D4219100EA6A77 /* EuroHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuroHandler.swift; sourceTree = "<group>"; };
 		654E3A6923D425CC00EA6A77 /* ProductDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataStore.swift; sourceTree = "<group>"; };
 		654E3A6B23D427CB00EA6A77 /* ProductDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDecorator.swift; sourceTree = "<group>"; };
+		654E3A6D23D42C9E00EA6A77 /* StockTotalFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTotalFacade.swift; sourceTree = "<group>"; };
 		6594272C20E8FE930059A4F4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6594272D20E8FE930059A4F4 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		6594273020E8FF530059A4F4 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				654E3A6523D4219100EA6A77 /* EuroHandler.swift */,
 				654E3A6923D425CC00EA6A77 /* ProductDataStore.swift */,
 				654E3A6B23D427CB00EA6A77 /* ProductDecorator.swift */,
+				654E3A6D23D42C9E00EA6A77 /* StockTotalFacade.swift */,
 			);
 			path = SportStore;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				654E3A6423D41C9800EA6A77 /* ChangeRecordBuilder.swift in Sources */,
 				6594273220E8FF530059A4F4 /* MainTableViewCell.swift in Sources */,
 				654E3A5E23D4064100EA6A77 /* StockValueImplementations.swift in Sources */,
+				654E3A6E23D42C9E00EA6A77 /* StockTotalFacade.swift in Sources */,
 				654E3A5C23D2C82700EA6A77 /* Logger.swift in Sources */,
 				650B94D820E5AB130036EB9E /* AppDelegate.swift in Sources */,
 				65FA57CA23D2A13700F696B2 /* Product.swift in Sources */,
