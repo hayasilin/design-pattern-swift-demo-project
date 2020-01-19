@@ -79,8 +79,8 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
                 if let cell = currentCell as? MainTableViewCell {
                     if let product = cell.product {
 
-                        let dict = [product.name: product.stockLevel]
-                        undoManager?.registerUndo(withTarget: self, selector: #selector(undoStockLevel(data:)), object: dict)
+//                        let dict = [product.name: product.stockLevel]
+                        undoManager?.registerUndo(withTarget: self, selector: #selector(resetState), object: nil)
 
 
                         if let stepper = sender as? UIStepper {
@@ -100,21 +100,25 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
 
-    @objc func undoStockLevel(data: [String: Int]) {
-        let productName = data.keys.first
-        if productName != nil {
-            let stockLevel = data[productName!]
-            if stockLevel != nil {
-                for nproduct in productStore.products {
-                    if nproduct.name == productName {
-                        nproduct.stockLevel = stockLevel!
-                    }
-                }
-
-                updateStockLevel(name: productName!, level: stockLevel!)
-            }
-        }
+    @objc func resetState() {
+        productStore.resetState()
     }
+
+//    @objc func undoStockLevel(data: [String: Int]) {
+//        let productName = data.keys.first
+//        if productName != nil {
+//            let stockLevel = data[productName!]
+//            if stockLevel != nil {
+//                for nproduct in productStore.products {
+//                    if nproduct.name == productName {
+//                        nproduct.stockLevel = stockLevel!
+//                    }
+//                }
+//
+//                updateStockLevel(name: productName!, level: stockLevel!)
+//            }
+//        }
+//    }
 
     func updateStockLevel(name: String, level: Int) {
         for cell in self.tableView.visibleCells {

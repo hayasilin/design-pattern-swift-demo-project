@@ -30,7 +30,6 @@ final class ProductDataStore {
         Product.createProduct(name: "Bling-Bling King", description: "Gold-plated, diamond-studded King", category: "Chess", price: 1200.0, stockLevel: 4)
     ]
 
-
     func loadData() -> [Product] {
         var products = [Product]()
         for product in productData {
@@ -49,5 +48,9 @@ final class ProductDataStore {
             products.append(product)
         }
         return products
+    }
+
+    func resetState() {
+        self.products = loadData()
     }
 }
