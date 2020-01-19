@@ -38,9 +38,14 @@ final class ProductDataStore {
             if p.category == "Soccer" {
                 p = SoccerDecreaseDecorator(product: p)
             }
-            if self.callback != nil {
-                self.callback?(product)
+
+            StockServerFactory.getStockServer().getStockLevel(product: p.name) { (name, stockLevel) in
+                p.stockLevel = stockLevel
+                if self.callback != nil {
+                    self.callback?(product)
+                }
             }
+
             products.append(product)
         }
         return products
