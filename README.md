@@ -4,26 +4,29 @@ This is a demo project called **Sport Store** and I make it in Xcode 11 accordin
 
 If you want to know about how to use Swift for design pattern, [check here](https://github.com/hayasilin/design-pattern-swift).
 
+## Table of Contents
+- [Introduction](#introduction)
+- [Implementation](#implementation)
+
 ## Introduction
 
-I didn't follow 100% from the book's code, I made it my way with my understanding. You can check my commits to see how to implement each design pattern one by one.
-In addition, I didn't implement all design pattern from the book, such as object pool pattern, bridge pattern, flyweight pattern, strategy pattern, and visitor pattern, becasue it's already used by Cocoa framework.
+I didn't follow 100% from the book's code, I made it my way with my understanding. You can check my commits to see how I implement each design pattern one by one.
+
+In addition, I didn't implement all design pattern from the book, such as object pool pattern, bridge pattern, flyweight pattern, strategy pattern, visitor pattern, and template method pattern. Becasue some of them don't have implementation example from the book, or it's not suitable to implement in this demo project.
 
 ## Implementation
 
-1. Object template pattern
-2. [Prototype pattern](https://github.com/hayasilin/design-pattern-swift/blob/master/05_PrototypePattern.playground/Contents.swift)
-3. [Singleton pattern](https://github.com/hayasilin/design-pattern-swift/blob/master/06_SingletonPattern.playground/Contents.swift)
-4. [Factory method pattern](https://github.com/hayasilin/design-pattern-swift/blob/master/09_FactoryMethodPattern.playground/Contents.swift)
-5. [Abstract factory pattern](https://github.com/hayasilin/design-pattern-swift/blob/master/10_AbstractFactoryPattern.playground/Contents.swift)
-6. [Builder pattern](https://github.com/hayasilin/design-pattern-swift/blob/master/11_BuilderPattern.playground/Contents.swift)
-7. [Adapter pattern](https://github.com/hayasilin/design-pattern-swift/blob/master/12_AdapterPattern.playground/Contents.swift)
-8. [Decorator pattern](https://github.com/hayasilin/design-pattern-swift/blob/master/14_DecoratorPattern.playground/Contents.swift)
-9. [Composite pattern](https://github.com/hayasilin/design-pattern-swift/blob/master/15_CompositePattern.playground/Contents.swift)
-10. [Facade pattern](https://github.com/hayasilin/design-pattern-swift/blob/master/16_FacadePattern.playground/Contents.swift)
-11. [Proxy pattern](https://github.com/hayasilin/design-pattern-swift/blob/master/18_ProxyPattern.playground/Contents.swift)
-12. [Chain of responsibility pattern](https://github.com/hayasilin/design-pattern-swift/blob/master/19_ChainOfResponsibilityPattern.playground/Contents.swift)
-13. [Command pattern](https://github.com/hayasilin/design-pattern-swift/blob/master/20_CommandPattern.playground/Contents.swift)
-14. Observer pattern
-15. [Memento pattern](https://github.com/hayasilin/design-pattern-swift/blob/master/23_MementoPattern.playground/Contents.swift)
-16. [Template method pattern](https://github.com/hayasilin/design-pattern-swift/blob/master/26_TemplateMethodPattern.playground/Contents.swift)
+1. [Object template pattern](https://github.com/hayasilin/design-pattern-swift-demo-project/commit/983e09faf13827fb2c780abdbc3bfe42ba53ff96)
+2. [Prototype pattern](https://github.com/hayasilin/design-pattern-swift-demo-project/commit/6e34a77ce410c43e68fe059b90aa7d9230cdda7d)
+3. [Singleton pattern](https://github.com/hayasilin/design-pattern-swift-demo-project/commit/3739b461aaf8fe4e7e4b98f7e5968cd00abe5be9)
+4. [Factory method pattern](https://github.com/hayasilin/design-pattern-swift-demo-project/commit/727238610f2ff248b1b738dda3a1ca8e6f243391)
+5. [Abstract factory pattern](https://github.com/hayasilin/design-pattern-swift-demo-project/commit/67622b9eb2eb7790da2c512de7436228596b57df)
+6. [Builder pattern](https://github.com/hayasilin/design-pattern-swift-demo-project/commit/5546388e0357266bee09053c358391e6ce1a8fb3)
+7. [Adapter pattern](https://github.com/hayasilin/design-pattern-swift-demo-project/commit/14b66d7988a8035bbb5ee226774be05a5c5301cc)
+8. [Decorator pattern](https://github.com/hayasilin/design-pattern-swift-demo-project/commit/d850ec3de99de097effe2dae36cd413aa34c926c)
+9. [Composite pattern](https://github.com/hayasilin/design-pattern-swift-demo-project/commit/d2fc7e9a3859304b3bb06895a5d5027cf4db80bf)
+10. [Facade pattern](https://github.com/hayasilin/design-pattern-swift-demo-project/commit/285e9ef8edf3bad301e62b75c7f9def49bb1b4b1)
+11. [Chain of responsibility pattern](https://github.com/hayasilin/design-pattern-swift-demo-project/commit/4242ddd704cbd889438a6c54be550f42526d79b2)
+12. [Command pattern](https://github.com/hayasilin/design-pattern-swift-demo-project/commit/af9cbc8eb7fe69c176645ff1bbd4bd463958c3a2)
+13. [Observer pattern](https://github.com/hayasilin/design-pattern-swift-demo-project/commit/507a3bda89f102a139ca65a99db5f5637e804d0f)
+14. [Memento pattern](https://github.com/hayasilin/design-pattern-swift-demo-project/commit/c8493681856b1fd838f3aa0b6f8f53f64e1a52cf)
