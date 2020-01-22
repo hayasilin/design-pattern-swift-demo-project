@@ -12,7 +12,17 @@ If you want to know about how to use Swift for design pattern, [check here](http
 
 I didn't follow 100% from the book's code, I made it my way with my understanding. You can check my commits to see how I implement each design pattern one by one.
 
-In addition, I didn't implement all design pattern from the book, such as object pool pattern, bridge pattern, flyweight pattern, strategy pattern, visitor pattern, and template method pattern. Becasue some of them don't have implementation example from the book, or it's not suitable to implement in this demo project.
+In addition, I didn't implement all design pattern from the book, becasue some of them don't have implementation example from the book, or it's not suitable to implement in this demo project.
+
+**The design patter that didn't implement in demo project:**
+- Object pool pattern
+- Bridge pattern
+- Flyweight pattern
+- Strategy pattern
+- Visitor pattern
+- Template method pattern
+
+**Still you can [check here](https://github.com/hayasilin/design-pattern-swift) to learn them.**
 
 ## Implementation
 
