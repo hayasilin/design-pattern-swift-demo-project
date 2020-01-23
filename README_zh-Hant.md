@@ -1,5 +1,7 @@
 # 設計模式（Design Pattern）Swift iOS專案
 
+[Here is English version](https://github.com/hayasilin/design-pattern-swift-demo-project/blob/master/README.md)
+
 這是展示使用設計模式（Design Pattern）的iOS專案，名為**Sport Store**。我使用Xcode 11開發並參考Adam Freeman的書：[Pro Design Patterns in Swift](https://www.amazon.com/Design-Patterns-Swift-Adam-Freeman/dp/148420395X)。
 
 如果你想了解更多如何使用Swift實現設計模式，可以[參考這裡](https://github.com/hayasilin/design-pattern-swift)。
@@ -10,7 +12,7 @@
 
 ## 介紹
 
-我並沒有100%的照著書中的程式碼實作，我將專案以自己能夠夠好理解的方式進行更改。你可以參考我的commit來看我如果實現各種設計模式。
+我並沒有100%的照著書中的程式碼實作，我將專案以自己能夠理解的方式進行更改。你可以參考我的commit來看我如果實現各種設計模式。
 
 我並沒有實作所有書中的設計模式，因為某些設計模式在書中並沒有實作在此專案中。此外，還有部分的設計模式並不適合此專案。
 

@@ -1,5 +1,7 @@
 # Design Pattern Swift Demo Project
 
+[Here is Tradition Chinese version 繁體中文版本](https://github.com/hayasilin/design-pattern-swift-demo-project/blob/master/README_zh-Hant.md)
+
 This is a demo project called **Sport Store** and I make it in Xcode 11 according to Adam Freeman's [Pro Design Patterns in Swift](https://www.amazon.com/Design-Patterns-Swift-Adam-Freeman/dp/148420395X) to demostrate how to implement design patterns in a real iOS project. Enjoy it.
 
 If you want to know about how to use Swift for design pattern, [check here](https://github.com/hayasilin/design-pattern-swift).
